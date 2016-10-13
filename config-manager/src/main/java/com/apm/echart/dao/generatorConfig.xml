@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 本地运行jar包 -->
+	<classPathEntry location="E:/Java/pro/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar" />
+	<!-- 自动生成定义。 -->
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/apm" driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+		<javaModelGenerator targetPackage="com.apm.echart.dao.model" targetProject="echart-java" />
+		<sqlMapGenerator targetPackage="com.apm.echart.dao.map" targetProject="echart-java" />
+		<javaClientGenerator targetPackage="com.apm.echart.dao.client" targetProject="echart-java" type="XMLMAPPER" />
+		<table tableName="user_t">
+			<columnOverride column="id" property="id" />
+			<columnOverride column="user_name" property="user_name" />
+			<columnOverride column="password" property="password" />
+			<columnOverride column="age" property="age" />
+		</table>
+	</context>
+</generatorConfiguration>

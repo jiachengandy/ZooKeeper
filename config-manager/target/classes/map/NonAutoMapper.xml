@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apm.echart.dao.client.NonAutoMapper">
+	<!-- Map结构定义 -->
+	<resultMap id="UserMap" type="com.apm.echart.dao.model.UserT">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="user_name" jdbcType="VARCHAR" property="user_name" />
+		<result column="password" jdbcType="VARCHAR" property="password" />
+		<result column="age" jdbcType="INTEGER" property="age" />
+	</resultMap>
+	
+	<!-- 向表中添加数据，对于com.apm.echart.dao.client.NonAutoMapper中的方法。-->
+	<insert id="addUser" parameterType="com.apm.echart.dao.model.UserT">
+		insert into user_t (user_name, password, age) values (#{user_name},
+		#{password}, #{age})
+	</insert>
+</mapper>
